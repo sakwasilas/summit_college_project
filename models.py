@@ -20,7 +20,6 @@ class Course(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(100), unique=True, nullable=False)
-    is_modular = Column(Enum('yes', 'no'), default='yes')
 
     subjects = relationship("Subject", back_populates="course")
 
